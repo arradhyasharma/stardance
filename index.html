@@ -3,9 +3,26 @@
 <head>
     <title>NoteOS</title>
    </head>
-<body style="font-family: Helvetica, sans-serif; background-color: #fcfbe3;">
-<h1>Welcome to my NoteOS</h1>
-    <p>This is a <strong>distraction-free</strong> environment designed for writing and organizing thoughts.</p>
+<body background="https://cdn.wallpapersafari.com/98/65/ViTC7s.jpg" style=" background-repeat: no-repeat; background-size: cover; background-attachment:fixed; color: whitesmoke; font-family: 'inter', sans-serif;">
+
+    <div style="border: solid; width: 400px; border-radius:10px;padding: 16px; position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);">
+<h1>NoteOS</h1>
+    <p>Welcome to my NoteOS.This is a <strong>distraction-free</strong> environment designed for writing and organizing thoughts.</p>
+    </div> 
+    <div style="display:flex; justify-content: space-between; align-items: center; background-color: rgb(63, 191, 241); color:white; padding: 5px 5px;">
+        <p style="margin-left: 15px; font-weight: bold;">NoteOS</p>
+        <p id="timeElement" style="margin-right: 15px;"></p>
+</div>
+<script>
+    function updateTime(){
+    var currentTime = new Date().toLocaleString();
+    var timeText = document.querySelector("#timeElement");
+    timeText.innerHTML = currentTime;
+    }
+
+    setInterval(updateTime,1000);
+
+</script>
 </body>
 </html>
     
