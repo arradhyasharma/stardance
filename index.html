@@ -1,28 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>NoteOS</title>
-   </head>
-<body background="https://cdn.wallpapersafari.com/98/65/ViTC7s.jpg" style=" background-repeat: no-repeat; background-size: cover; background-attachment:fixed; color: whitesmoke; font-family: 'inter', sans-serif;">
+    <meta charset="UTF-8">
+    <title>NoteStarOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <div style="border: solid; width: 400px; border-radius:10px;padding: 16px; position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);">
-<h1>NoteOS</h1>
-    <p>Welcome to my NoteOS.This is a <strong>distraction-free</strong> environment designed for writing and organizing thoughts.</p>
+    <!-- Top Status Bar -->
+    <div id="top-bar">
+        <span id="welcomeopen" class="os-logo">NoteStarOS</span>
+        <span id="timeElement"></span>
+    </div>
+
+    <!-- Desktop Icons Area -->
+    <div id="desktopApps">
+        <div class="app-icon" id="notesOpen">
+            <img src="https://img.magnific.com/premium-vector/sn-beauty-product-luxury-logo-design_745595-730.jpg?semt=ais_hybrid&w=740&q=80" alt="Notes">
+            <span>Notes</span>
+        </div>
+        
+        <div class="app-icon" id="calcOpen">
+            <div class="calc-icon-placeholder">🧮</div>
+            <span>Calculator</span>
+        </div>
+    </div>
+
+    <!-- Welcome Window -->
+    <div id="welcomeWindow" class="window">
+        <div id="welcomeWindowHeader" class="window-header">
+            <span>Welcome to NoteStarOS</span>
+            <button class="control-btn close-btn" id="welcomeclose">×</button>
+        </div>
+        <div class="window-body">
+            <h1>NoteStarOS</h1>
+            <p>Welcome to your distraction-free desktop environment for writing and organizing notes.</p>
+        </div>
     </div> 
-    <div style="display:flex; justify-content: space-between; align-items: center; background-color: rgb(63, 191, 241); color:white; padding: 5px 5px;">
-        <p style="margin-left: 15px; font-weight: bold;">NoteOS</p>
-        <p id="timeElement" style="margin-right: 15px;"></p>
-</div>
-<script>
-    function updateTime(){
-    var currentTime = new Date().toLocaleString();
-    var timeText = document.querySelector("#timeElement");
-    timeText.innerHTML = currentTime;
-    }
 
-    setInterval(updateTime,1000);
+    <!-- Notes Window -->
+    <div id="myNote" class="window">
+        <div id="myNoteHeader" class="window-header">
+            <span>Notes</span>
+            <div class="window-controls">
+                <button class="control-btn close-btn" id="notesClose">×</button>
+            </div>
+        </div>
+        <div class="window-body note-body">
+            <div class="notes-toolbar">
+                <button id="clearNoteBtn">Clear Text</button>
+            </div>
+            <textarea id="notesArea" class="note-textarea" placeholder="Start typing your note here..."></textarea>
+        </div>
+    </div>
 
-</script>
+    <!-- Calculator Window -->
+    <div id="myCalc" class="window">
+        <div id="myCalcHeader" class="window-header">
+            <span>Calculator</span>
+            <div class="window-controls">
+                <button class="control-btn close-btn" id="calcClose">×</button>
+            </div>
+        </div>
+        <div class="window-body calc-body">
+            <input type="text" id="calcScreen" readonly value="0">
+            <div class="calc-grid">
+                <button onclick="clearCalc()" class="calc-btn action">C</button>
+                <button onclick="deleteCalc()" class="calc-btn action">DEL</button>
+                <button onclick="appendCalc('/')" class="calc-btn op">÷</button>
+                <button onclick="appendCalc('*')" class="calc-btn op">×</button>
+                
+                <button onclick="appendCalc('7')" class="calc-btn">7</button>
+                <button onclick="appendCalc('8')" class="calc-btn">8</button>
+                <button onclick="appendCalc('9')" class="calc-btn">9</button>
+                <button onclick="appendCalc('-')" class="calc-btn op">-</button>
+                
+                <button onclick="appendCalc('4')" class="calc-btn">4</button>
+                <button onclick="appendCalc('5')" class="calc-btn">5</button>
+                <button onclick="appendCalc('6')" class="calc-btn">6</button>
+                <button onclick="appendCalc('+')" class="calc-btn op">+</button>
+                
+                <button onclick="appendCalc('1')" class="calc-btn">1</button>
+                <button onclick="appendCalc('2')" class="calc-btn">2</button>
+                <button onclick="appendCalc('3')" class="calc-btn">3</button>
+                <button onclick="calculateResult()" class="calc-btn equal span-2-v">=</button>
+                
+                <button onclick="appendCalc('0')" class="calc-btn span-2">0</button>
+                <button onclick="appendCalc('.')" class="calc-btn">.</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-    
