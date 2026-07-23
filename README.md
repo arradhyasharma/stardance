@@ -20,6 +20,12 @@
 
 ---
 
+## AI used
+
+* My javascript function wasn't working so I take help of AI to fix it
+
+---
+
 ## 🛠️ Project Structure
 
 ```text
