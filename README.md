@@ -1,35 +1,22 @@
-# NoteStarOS 🌌
+# NoteStarOS 
 
-**NoteStarOS** is a lightweight, web-based operating system interface built using HTML, CSS, and vanilla JavaScript. It offers a clean, distraction-free environment equipped with essential utilities like a Notes app, a Calculator, dynamic window management, and a real-time system clock.
+**NoteStarOS** is a web-based operating system which is my first os and it has 3 multiple windows. first is welcome window it shows that my os is a distraction free os for studying, and writing things and it also has a calculator because math can be everywhere in study.
+
 
 ---
 
-## 🚀 Features
+##  Features
 
-* **Desktop Environment:**
-  * Top navigation bar displaying real-time system clock and logo controls.
-  * Desktop app icons for quick access to installed applications.
 * **Window Management Engine:**
   * **Draggable Windows:** Drag window headers to reposition them anywhere on the desktop.
-  * **Z-Index Focus:** Clicking any window automatically brings it to the front layer.
-  * **Window Actions:** Open and close windows dynamically using controls.
+  * **Window Actions:** Open and close windows using buttons.
 * **Built-in Apps:**
-  * 📝 **Notes App:** A clean text area designed for typing quick thoughts and notes with a clear-text utility.
-  * 🧮 **Calculator:** A fully functional calculator capable of standard arithmetic operations (`+`, `-`, `×`, `÷`, `DEL`, `Clear`).
-  * ℹ️ **Welcome Window:** Overview modal with information about NoteStarOS.
+  *  **Notes App:** A clean text area designed for typing quick thoughts and notes with a clear-text utilities.
+  *  **Calculator:** A fully functional calculator capable of standard arithmetic operations.
+  *  **Welcome Window:** Overview model with information about NoteStarOS.
 
 ---
 
 ## AI used
 
 * My javascript function wasn't working so I take help of AI to fix it
-
----
-
-## 🛠️ Project Structure
-
-```text
-NoteStarOS/
-├── index.html     # Structural markup for OS components, top bar, and windows
-├── style.css      # Custom styling, window positioning, glassmorphism UI
-└── script.js      # Window management, dragging logic, time update, and app engines
